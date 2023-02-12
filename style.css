@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Just',sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:#131313;
+}
+.container
+{
+    position: relative;
+
+}
+.container .card
+{
+    position: relative;
+    width:320px ;
+    height: 450px;
+    background: #131313;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .card::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #54b4ec;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover::before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+.container .card::after
+{
+    content: 'РадВкус';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(6, 122, 237, 0.5);
+}
+.container .card .imgBx
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.container .card:hover .imgBx
+{
+    top: 0%;
+    transform: translateY(0%);
+}
+.container .card .imgBx img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 180px;
+}
+.container .card .contentBx
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container .card:hover .contentBx
+{
+    height: 210px;
+}
+.container .card .contentBx h2
+{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #0d6cfa;
+}
+.container .card .contentBx .size,
+.container .card .contentBx .color
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentBx .size
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.container .card:hover .contentBx .color
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3
+{
+    color: #fafbfc;
+    font-weight:300 ;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container .card .contentBx .size span
+{
+    width: 39px;
+    height: 26px;
+    text-align: center;
+    line-height:26px ;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #1898e8;
+    margin: 0 5px;
+    transition: 0.5s;
+    color:#fff ;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.container .card .contentBx .size span:hover
+{
+    background: #f99305;
+}
+.container .card .contentBx .color span
+{
+    width: 40px;
+    height: 20px;
+    background: #ff0;
+    border-radius:50% ;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container .card .contentBx .color span:nth-child(2)
+{
+    color: #faf9fd;
+    background:#f00808 ;
+}
+.container .card .contentBx .color span:nth-child(3)
+{
+    color: #faf9fd;
+    background:#4f8eec ;
+}
+.container .card .contentBx .color span:nth-child(4)
+{
+    color: #faf9fd;
+    background:#e11aac ;
+}
+.container .card .contentBx .color span:nth-child(5)
+{
+    color: #faf9fd;
+    background:#2108da ;
+}
+.container .card .contentBx a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #60b0e2;
+    border-radius: 6px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #FFF;
+    opacity:0 ;
+    transform: translate(50px);
+    transition: 0.5s;
+}
+.container .card:hover .contentBx a
+{
+    opacity:1 ;
+    transform: translate(0px);
+    transition-delay: 0.75s;
+}
+
+/* end card */
+
+
+.container2
+{
+    position: relative;
+
+}
+.container2 .card2
+{
+    position: relative;
+    width:320px ;
+    height: 450px;
+    background: #090909;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container2 .card2::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3e0202d3;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container2 .card2:hover::before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+.container2 .card2::after
+{
+    content: 'РадВкус';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: #3e0202d3;
+}
+.container2 .card2 .imgBx2
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.container2 .card2:hover .imgBx2
+{
+    top: 0%;
+    transform: translateY(0%);
+}
+.container2 .card2 .imgBx2 img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 180px;
+}
+.container2 .card2 .contentBx2
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container2 .card2:hover .contentBx2
+{
+    height: 210px;
+}
+.container2 .card2 .contentBx2 h2
+{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #b90909d3;
+}
+.container2 .card2 .contentBx2 .size2,
+.container2 .card2 .contentBx2 .color2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container2 .card2:hover .contentBx2 .size2
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.container2 .card2:hover .contentBx2 .color2
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.container2 .card2 .contentBx2 .size2 h3,
+.container2 .card2 .contentBx2 .color2 h3
+{
+    color: #f5f0f0d3;
+    font-weight:300 ;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container2 .card2 .contentBx2 .size2 span
+{
+    width: 39px;
+    height: 26px;
+    text-align: center;
+    line-height:26px ;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #7e0606d3;
+    margin: 0 5px;
+    transition: 0.5s;
+    color:#fff ;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.container2 .card2 .contentBx2 .size2 span:hover
+{
+    background: #ee0dc1;
+}
+.container2 .card2 .contentBx2 .color2 span
+{
+    width: 40px;
+    height: 20px;
+    background: #ff0;
+    border-radius:50% ;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container2 .card2 .contentBx2 .color2 span:nth-child(2)
+{
+    color: #faf9fd;
+    background:#f00808 ;
+}
+.container2 .card2 .contentBx2 .color2 span:nth-child(3)
+{
+    color: #faf9fd;
+    background:#4f8eec ;
+}
+.container2 .card2 .contentBx2 .color2 span:nth-child(4)
+{
+    color: #faf9fd;
+    background:#e11aac ;
+}
+.container2 .card2 .contentBx2 .color2 span:nth-child(5)
+{
+    color: #faf9fd;
+    background:#2108da ;
+}
+.container2 .card2 .contentBx2 a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #7e0606d3;
+    border-radius: 6px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    opacity:0 ;
+    transform: translate(50px);
+    transition: 0.5s;
+}
+.container2 .card2:hover .contentBx2 a
+{
+    opacity:1 ;
+    transform: translate(0px);
+    transition-delay: 0.75s;
+}
+
+
+.container3
+{
+    position: relative;
+
+}
+.container3 .card3
+{
+    position: relative;
+    width:320px ;
+    height: 450px;
+    background: #090909;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container3 .card3::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #bfe20fd3;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container3 .card3:hover::before
+{
+    clip-path: circle(300px at 80% -20%);
+}
+.container3 .card3::after
+{
+    content: 'РадВкус';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: #c7cb69d3;
+}
+.container3 .card3 .imgBx3
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.container3 .card3:hover .imgBx3
+{
+    top: 0%;
+    transform: translateY(0%);
+}
+.container3 .card3 .imgBx3 img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-25deg);
+    width: 180px;
+}
+.container3 .card3 .contentBx3
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container3 .card3:hover .contentBx3
+{
+    height: 210px;
+}
+.container3 .card3 .contentBx3 h2
+{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #d3f803;
+}
+.container3 .card3 .contentBx3 .size3,
+.container3 .card3 .contentBx3 .color3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container3 .card3:hover .contentBx3 .size3
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+.container3 .card3:hover .contentBx3 .color3
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+.container3 .card3 .contentBx3 .size3 h3,
+.container3 .card3 .contentBx3 .color3 h3
+{
+    color: #eb0cac;
+    font-weight:300 ;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container3 .card3 .contentBx3 .size3 span
+{
+    width: 39px;
+    height: 26px;
+    text-align: center;
+    line-height:26px ;
+    font-size: 14px;
+    display: inline-block;
+    color: #121212;
+    background: #80a905d3;
+    margin: 0 5px;
+    transition: 0.5s;
+    color:#0f0e0e ;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.container3 .card3 .contentBx3 .size3 span:hover
+{
+    background: #e9e4e8;
+}
+.container3 .card3 .contentBx3 .color3 span
+{
+    width: 40px;
+    height: 20px;
+    background: #ff0;
+    border-radius:50% ;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container3 .card3 .contentBx3 .color3 span:nth-child(2)
+{
+    color: #faf9fd;
+    background:#f00808 ;
+}
+.container3 .card3 .contentBx3 .color3 span:nth-child(3)
+{
+    color: #faf9fd;
+    background:#4f8eec ;
+}
+.container3 .card3 .contentBx3 .color3 span:nth-child(4)
+{
+    color: #faf9fd;
+    background:#e11aac ;
+}
+.container3 .card3 .contentBx3 .color3 span:nth-child(5)
+{
+    color: #faf9fd;
+    background:#2108da ;
+}
+.container3 .card3 .contentBx3 a
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #a9e111d3;
+    border-radius: 6px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    opacity:0 ;
+    transform: translate(50px);
+    transition: 0.5s;
+}
+.container3 .card3:hover .contentBx3 a
+{
+    opacity:1 ;
+    transform: translate(0px);
+    transition-delay: 0.75s;
+}
